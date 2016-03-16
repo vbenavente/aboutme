@@ -1,31 +1,21 @@
-/*console.log('hello world from javascript');
-alert('hello user I am javascript!');
 
-var favoriteNumber = prompt('What is your favorite number?');
+console.log('About Me');
 
-alert('your favorite number is ' + favoriteNumber);
+var userName = prompt('What is your name?');
+console.log('Hi ' + userName + ' Do you want to play a game?');
+alert('Hi ' + userName + ', Welcome to my page!');
 
-var slugsRule = confirm('are wizards better than slugs?');
+var playGame = prompt('Do you want to play a game? yes or no');
+console.log('You actually do not have a choice! ' + playGame);
 
-alert('wizards are better than slugs: ' + slugsRule);*/
-console.log('Tell me about your car!');
+var manyLanguages = prompt('Do you think I have studied more than 5 languages? yes or no');
+console.log('I have actually studied 9 languages ' + manyLanguages);
 
-var carColor = prompt('What color is your car?');
-console.log('So you drive a ' + carColor + ' car');
+var manyCountries = prompt('Do you think I have been to more than 5 countries? yes or no');
+console.log('I have been to more than 5 countries ' + manyCountries);
 
-var carMake = prompt('What make car do you drive?');
-console.log('It is a ' + carModel);
+var birthCity = prompt('Do you think I was born in Asheville, NC? yes or no');
+console.log('I was actually born in Raleigh, NC ' + birthCity);
 
-var carModel = prompt('What model is your car?');
-console.log('Your ' + carModel + ' is a ' + carMake);
-
-var modelYear = prompt('What year is your car?');
-console.log('Your car was born in ' + modelYear);
-
-var carFuel = prompt('Does your car run on diesel or unleaded gas?');
-console.log('Your car runs on ' + carFuel + '. Mine runs on love!');
-
-var carDoors = prompt('How many doors does your car have?');
-console.log(carDoors + ' doors is better than one!');
-
-alert ('You drive a ' + carColor + ' ' + modelYear + ' ' + carMake + ' ' + carModel + ' that runs on ' + carFuel + ' and has ' + carDoors + ' doors.');
+var birthYear = prompt('Do you think I was born in the 70s? yes or no');
+console.log('I was born in 1981 ' + birthYear);
