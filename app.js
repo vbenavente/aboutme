@@ -11,7 +11,7 @@ if((playGame.toLowerCase() === 'yes') || (playGame.toLowerCase() === 'y')) {
   alert('Great ' + userName + ' lets play!');
 } else if((playGame.toLowerCase() === 'no') || (playGame.toLowerCase() === 'n')) {
   alert('Ok ' + userName + ' I will just ask you a few questions?');
-} else {console.log('You cannot even answer a simple question?');
+} else {console.log('You cannot even answer a simple question2?');
   alert('I did not understand your response');
 }
 
@@ -21,7 +21,7 @@ if((manyLanguages.toLowerCase() === 'yes') || (manyLanguages.toLowerCase() === '
   alert('That is correct ' + userName);
 } else if ((manyLanguages.toLowerCase() === 'no') || (manyLanguages.toLowerCase() === 'n')) {
   alert ('Nope you are wrong ' + userName);
-} else {console.log('You cannot even answer a simple question?');
+} else {console.log('You cannot even answer a simple question3?');
   alert('I did not understand your response');
 }
 
@@ -31,7 +31,7 @@ if((manyCountries.toLowerCase() === 'yes') || (manyCountries.toLowerCase() === '
   alert('That is correct ' + userName);
 } else if ((manyCountries.toLowerCase() === 'no') || (manyCountries.toLowerCase() === 'n')) {
   alert ('Nope you are wrong ' + userName);
-} else {console.log('You cannot even answer a simple question?');
+} else {console.log('You cannot even answer a simple question4?');
   alert('I did not understand your response');
 }
 
@@ -41,16 +41,24 @@ if((birthYear.toLowerCase() === 'yes') || (birthYear.toLowerCase() === 'y')) {
   alert('Nope you are wrong ' + userName);
 } else if ((birthYear.toLowerCase() === 'no') || (birthYear.toLowerCase() === 'n')) {
   alert ('That is correct ' + userName);
-} else {console.log('You cannot even answer a simple question?');
+} else {console.log('You cannot even answer a simple question5?');
   alert('I did not understand your response');
 }
 
 var birthCity = prompt('Do you think I was born in Asheville, NC? yes or no');
 console.log('I was actually born in Raleigh, NC ' + birthCity);
 if((birthCity.toLowerCase() === 'yes') || (birthCity.toLowerCase() === 'y')) {
-  alert('That is correct ' + userName);
+  alert('That is correct ' + userName + '. You get a bonus question!');
+  var bonusQuestion = prompt('Did I ever live in another country? yes or no');
+  if((bonusQuestion.toLowerCase() === 'yes') || (bonusQuestion.toLowerCase() === 'n')) {
+    alert('That is correct ' + userName);
+  } else if ((bonusQuestion.toLowerCase() === 'no') || (bonusQuestion.toLowerCase() === 'n')) {
+    alert ('Nope you are wrong ' + userName);
+  } else {console.log('You cannot even answer a simple question6?');
+    alert('I did not understand your response');
+  }
 } else if ((birthCity.toLowerCase() === 'no') || (birthCity.toLowerCase() === 'n')) {
   alert ('Nope you are wrong ' + userName);
-} else {console.log('You cannot even answer a simple question?');
+} else {console.log('You cannot even answer a simple question5?');
   alert('I did not understand your response');
 }
