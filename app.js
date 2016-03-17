@@ -10,7 +10,7 @@ console.log('You actually do not have a choice! ' + playGame);
 if((playGame.toLowerCase() === 'yes') || (playGame.toLowerCase() === 'y')) {
   alert('Great ' + userName + ' lets play!');
 } else if((playGame.toLowerCase() === 'no') || (playGame.toLowerCase() === 'n')) {
-  alert('Ok ' + userName + ' I will just ask you a few questions?');
+  alert('Ok ' + userName + ' I will just ask you a few questions');
 } else {console.log('You cannot even answer a simple question2?');
   alert('I did not understand your response');
 }
@@ -50,7 +50,7 @@ console.log('I was actually born in Raleigh, NC ' + birthCity);
 if((birthCity.toLowerCase() === 'yes') || (birthCity.toLowerCase() === 'y')) {
   alert('That is correct ' + userName + '. You get a bonus question!');
   var bonusQuestion = prompt('Did I ever live in another country? yes or no');
-  if((bonusQuestion.toLowerCase() === 'yes') || (bonusQuestion.toLowerCase() === 'n')) {
+  if((bonusQuestion.toLowerCase() === 'yes') || (bonusQuestion.toLowerCase() === 'y')) {
     alert('That is correct ' + userName);
   } else if ((bonusQuestion.toLowerCase() === 'no') || (bonusQuestion.toLowerCase() === 'n')) {
     alert ('Nope you are wrong ' + userName);
