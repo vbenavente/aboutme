@@ -58,7 +58,23 @@ if((birthCity.toLowerCase() === 'yes') || (birthCity.toLowerCase() === 'y')) {
     alert('I did not understand your response');
   }
 } else if ((birthCity.toLowerCase() === 'no') || (birthCity.toLowerCase() === 'n')) {
-  alert ('Nope you are wrong ' + userName);
+  alert('Nope you are wrong ' + userName);
 } else {console.log('You cannot even answer a simple question5?');
   alert('I did not understand your response');
+}
+
+for(var i = 0; (i < 4 || stalloneMovies === 33); i++) {
+  var stalloneMovies = prompt('How many Sylvester Stallone movies do you think I\'ve seen?');
+  stalloneMovies = parseInt(stalloneMovies);
+  console.log('stalloneMovies: ' + stalloneMovies);
+  if(stalloneMovies < 33){
+    alert('Your guess is too low! Try again');
+  } else if(stalloneMovies > 33){
+    alert('Your guess is too high! Try again!');
+  } else if(isNan(stalloneMovies)){
+    alert('That is not a number try again!');
+  }
+  else {
+    alert('That is correct!');
+  }
 }
