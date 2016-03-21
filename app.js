@@ -47,62 +47,74 @@ langAns();
 
 var ques3 = document.getElementById('ans3');
 
-var manyCountries = prompt('Do you think I have been to more than 5 countries? yes or no');
-totalQuestions++;
-console.log('I have been to more than 5 countries ' + manyCountries);
-if((manyCountries.toLowerCase() === 'yes') || (manyCountries.toLowerCase() === 'y')) {
-  ques3.textContent = 'That is correct ' + userName;
-  answerTracker.push(manyCountries);
-  console.log('manyCountries push: ' + manyCountries);
-} else if ((manyCountries.toLowerCase() === 'no') || (manyCountries.toLowerCase() === 'n')) {
-  ques3.textContent = 'Nope you are wrong ' + userName;
-} else {console.log('You cannot even answer a simple question4?');
-  ques3.textContent = 'I did not understand your response';
-}
+var countryAns = function() {
+  var manyCountries = prompt('Do you think I have been to more than 5 countries? yes or no');
+  totalQuestions++;
+  console.log('I have been to more than 5 countries ' + manyCountries);
+  if((manyCountries.toLowerCase() === 'yes') || (manyCountries.toLowerCase() === 'y')) {
+    ques3.textContent = 'That is correct ' + userName;
+    answerTracker.push(manyCountries);
+    console.log('manyCountries push: ' + manyCountries);
+  } else if ((manyCountries.toLowerCase() === 'no') || (manyCountries.toLowerCase() === 'n')) {
+    ques3.textContent = 'Nope you are wrong ' + userName;
+  } else {console.log('You cannot even answer a simple question4?');
+    ques3.textContent = 'I did not understand your response';
+  }
+};
+countryAns();
 
 var ques4 = document.getElementById('ans4');
 
-var birthYear = prompt('Do you think I was born in the 70s? yes or no');
-totalQuestions++;
-console.log('I was born in 1981 ' + birthYear);
-if((birthYear.toLowerCase() === 'yes') || (birthYear.toLowerCase() === 'y')) {
-  ques4.textContent = 'Nope you are wrong ' + userName;
-} else if ((birthYear.toLowerCase() === 'no') || (birthYear.toLowerCase() === 'n')) {
-  ques4.textContent = 'That is correct ' + userName;
-  answerTracker.push(birthYear);
-  console.log('birthYear push: ' + birthYear);
-} else {console.log('You cannot even answer a simple question5?');
-  ques4.textContent = 'I did not understand your response';
-}
+var birthYearAns = function() {
+  var birthYear = prompt('Do you think I was born in the 70s? yes or no');
+  totalQuestions++;
+  console.log('I was born in 1981 ' + birthYear);
+  if((birthYear.toLowerCase() === 'yes') || (birthYear.toLowerCase() === 'y')) {
+    ques4.textContent = 'Nope you are wrong ' + userName;
+  } else if ((birthYear.toLowerCase() === 'no') || (birthYear.toLowerCase() === 'n')) {
+    ques4.textContent = 'That is correct ' + userName;
+    answerTracker.push(birthYear);
+    console.log('birthYear push: ' + birthYear);
+  } else {console.log('You cannot even answer a simple question5?');
+    ques4.textContent = 'I did not understand your response';
+  }
+};
+birthYearAns();
 
 var ques5 = document.getElementById('ans5');
-
-var birthCity = prompt('Do you think I was born in Asheville, NC? yes or no');
-totalQuestions++;
-console.log('I was actually born in Raleigh, NC ' + birthCity);
-if((birthCity.toLowerCase() === 'no') || (birthCity.toLowerCase() === 'n')) {
-  ques5.textContent = 'That is correct ' + userName + '. You get a bonus question!';
-  answerTracker.push(birthCity);
-  console.log('birthCity push: ' + birthCity);
-
-  var ques6 = document.getElementById('ans6');
-
-  var bonusQuestion = prompt('Did I ever live in another country? yes or no');
+var birthCityAns = function() {
+  var birthCity = prompt('Do you think I was born in Asheville, NC? yes or no');
   totalQuestions++;
-  if((bonusQuestion.toLowerCase() === 'yes') || (bonusQuestion.toLowerCase() === 'y')) {
-    ques6.textContent = 'That is correct ' + userName;
-    answerTracker.push(bonusQuestion);
-    console.log('bonusQuestion push: ' + bonusQuestion);
-  } else if ((bonusQuestion.toLowerCase() === 'no') || (bonusQuestion.toLowerCase() === 'n')) {
-    ques6.textContent = 'Nope you are wrong ' + userName;
-  } else {console.log('You cannot even answer a simple question6?');
-    ques6.textContent = 'I did not understand your response';
+  console.log('I was actually born in Raleigh, NC ' + birthCity);
+  if((birthCity.toLowerCase() === 'no') || (birthCity.toLowerCase() === 'n')) {
+    ques5.textContent = 'That is correct ' + userName + '. You get a bonus question!';
+    answerTracker.push(birthCity);
+    console.log('birthCity push: ' + birthCity);
+
+    var ques6 = document.getElementById('ans6');
+
+    var bonusAns = function() {
+
+      var bonusQuestion = prompt('Did I ever live in another country? yes or no');
+      totalQuestions++;
+      if((bonusQuestion.toLowerCase() === 'yes') || (bonusQuestion.toLowerCase() === 'y')) {
+        ques6.textContent = 'That is correct ' + userName;
+        answerTracker.push(bonusQuestion);
+        console.log('bonusQuestion push: ' + bonusQuestion);
+      } else if ((bonusQuestion.toLowerCase() === 'no') || (bonusQuestion.toLowerCase() === 'n')) {
+        ques6.textContent = 'Nope you are wrong ' + userName;
+      } else {console.log('You cannot even answer a simple question6?');
+        ques6.textContent = 'I did not understand your response';
+      }
+    };
+    bonusAns();
+  } else if ((birthCity.toLowerCase() === 'yes') || (birthCity.toLowerCase() === 'y')) {
+    ques5.textContent = 'Nope you are wrong ' + userName;
+  } else {console.log('You cannot even answer a simple question5?');
+    ques5.textContent = 'I did not understand your response';
   }
-} else if ((birthCity.toLowerCase() === 'yes') || (birthCity.toLowerCase() === 'y')) {
-  ques5.textContent = 'Nope you are wrong ' + userName;
-} else {console.log('You cannot even answer a simple question5?');
-  ques5.textContent = 'I did not understand your response';
-}
+};
+birthCityAns();
 
 totalQuestions++;
 for(var i = 0; (i < 4 && stalloneMovies !== 33); i++) {
