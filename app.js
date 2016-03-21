@@ -117,44 +117,49 @@ var birthCityAns = function() {
 birthCityAns();
 
 totalQuestions++;
-for(var i = 0; (i < 4 && stalloneMovies !== 33); i++) {
-  var ques7 = document.getElementById('ans7');
-  var stalloneMovies = prompt('How many Sylvester Stallone movies do you think I\'ve seen?');
-  stalloneMovies = parseInt(stalloneMovies);
-  console.log('stalloneMovies: ' + stalloneMovies);
-  if(stalloneMovies < 33){
-    console.log('Too high');
-    ques7.textContent = 'Your guess is too low! Try again';
-  } else if(stalloneMovies > 33){
-    console.log('Too low');
-    ques7.textContent = 'Your guess is too high! Try again!';
-  } else if(isNaN(stalloneMovies)){
-    console.log('Not a number');
-    ques7.textContent = 'That is not a number try again!';
+var stalloneAns = function() {
+  for(var i = 0; (i < 4 && stalloneMovies !== 33); i++) {
+    var ques7 = document.getElementById('ans7');
+    var stalloneMovies = prompt('How many Sylvester Stallone movies do you think I\'ve seen?');
+    stalloneMovies = parseInt(stalloneMovies);
+    console.log('stalloneMovies: ' + stalloneMovies);
+    if(stalloneMovies < 33){
+      console.log('Too high');
+      ques7.textContent = 'Your guess is too low! Try again';
+    } else if(stalloneMovies > 33){
+      console.log('Too low');
+      ques7.textContent = 'Your guess is too high! Try again!';
+    } else if(isNaN(stalloneMovies)){
+      console.log('Not a number');
+      ques7.textContent = 'That is not a number try again!';
+    }
+      else {
+      console.log('finally!');
+      ques7.textContent = 'That is correct!';
+      answerTracker.push(stalloneMovies);
+      console.log('stalloneMovies push: ' + stalloneMovies);
+    }
   }
-  else {
-    console.log('finally!');
-    ques7.textContent = 'That is correct!';
-    answerTracker.push(stalloneMovies);
-    console.log('stalloneMovies push: ' + stalloneMovies);
-  }
-}
+};
+stalloneAns();
 
 alert('You got ' + answerTracker.length + ' out of ' + totalQuestions + ' correct ' + userName + ' Not bad!');
 
 var ques8 = document.getElementById('ans8');
 
-var doYouMind = prompt('Will you tell me your top 5 favorite games? yes or no');
-ques8.textContent = ans8;
-if((doYouMind.toLowerCase() === 'yes') || (doYouMind.toLowerCase() === 'y')) {
-  for(var i = 0; i < 5; i++) {
-    var favoriteGames = prompt('List one of your top 5 favorite games?');
-    console.log('favoriteGames: ' + favoriteGames);
-    gameTracker.push(favoriteGames);
-    console.log('no error here');
+var favGamesAns = function() {
+  var doYouMind = prompt('Will you tell me your top 5 favorite games? yes or no');
+  ques8.textContent = doYouMind;
+  if((doYouMind.toLowerCase() === 'yes') || (doYouMind.toLowerCase() === 'y')) {
+    for(var i = 0; i < 5; i++) {
+      var favoriteGames = prompt('List one of your top 5 favorite games?');
+      console.log('favoriteGames: ' + favoriteGames);
+      gameTracker.push(favoriteGames);
+      console.log('no error here');
+    }
+  } else {
+    confirm('Even after all we just shared?!');
   }
-} else {
-  confirm('Even after all we just shared?!');
-}
-
+};
 console.log(gameTracker);
+favGamesAns();
