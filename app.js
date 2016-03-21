@@ -11,33 +11,39 @@ var userName = prompt('What is your name?');
 console.log('Hi ' + userName + ' Do you want to play a game?');
 alert('Hi ' + userName + ', Welcome to my page!');
 
-var playGame = prompt('Do you want to play a game? yes or no');
-totalQuestions++;
-console.log('You actually do not have a choice! ' + playGame);
-if((playGame.toLowerCase() === 'yes') || (playGame.toLowerCase() === 'y')) {
-  ques1.textContent = 'Great ' + userName + ' let\'s play!';
-  answerTracker.push(playGame);
-  console.log('playGame push: ' + playGame);
-} else if((playGame.toLowerCase() === 'no') || (playGame.toLowerCase() === 'n')) {
-  ques1.textContent = 'Ok ' + userName + ' I will just ask you a few questions';
-} else {console.log('You cannot even answer a simple question2?');
-  ques1.textContent = 'I did not understand your response';
-}
+var gameAns = function() {
+  var playGame = prompt('Do you want to play a game? yes or no');
+  totalQuestions++;
+  console.log('You actually do not have a choice! ' + playGame);
+  if((playGame.toLowerCase() === 'yes') || (playGame.toLowerCase() === 'y')) {
+    ques1.textContent = 'Great ' + userName + ' let\'s play!';
+    answerTracker.push(playGame);
+    console.log('playGame push: ' + playGame);
+  } else if((playGame.toLowerCase() === 'no') || (playGame.toLowerCase() === 'n')) {
+    ques1.textContent = 'Ok ' + userName + ' I will just ask you a few questions';
+  } else {console.log('You cannot even answer a simple question2?');
+    ques1.textContent = 'I did not understand your response';
+  }
+};
+gameAns();
 
 var ques2 = document.getElementById('ans2');
 
-var manyLanguages = prompt('Do you think I have studied more than 5 languages? yes or no');
-totalQuestions++;
-console.log('I have actually studied 9 languages ' + manyLanguages);
-if((manyLanguages.toLowerCase() === 'yes') || (manyLanguages.toLowerCase() === 'y')) {
-  ques2.textContent = 'That is correct ' + userName;
-  answerTracker.push(manyLanguages);
-  console.log('manyLanguages push: ' + manyLanguages);
-} else if ((manyLanguages.toLowerCase() === 'no') || (manyLanguages.toLowerCase() === 'n')) {
-  ques2.textContent = 'Nope you are wrong ' + userName;
-} else {console.log('You cannot even answer a simple question3?');
-  ques2.textContent = 'I did not understand your response';
-}
+var langAns = function() {
+  var manyLanguages = prompt('Do you think I have studied more than 5 languages? yes or no');
+  totalQuestions++;
+  console.log('I have actually studied 9 languages ' + manyLanguages);
+  if((manyLanguages.toLowerCase() === 'yes') || (manyLanguages.toLowerCase() === 'y')) {
+    ques2.textContent = 'That is correct ' + userName;
+    answerTracker.push(manyLanguages);
+    console.log('manyLanguages push: ' + manyLanguages);
+  } else if ((manyLanguages.toLowerCase() === 'no') || (manyLanguages.toLowerCase() === 'n')) {
+    ques2.textContent = 'Nope you are wrong ' + userName;
+  } else {console.log('You cannot even answer a simple question3?');
+    ques2.textContent = 'I did not understand your response';
+  }
+};
+langAns();
 
 var ques3 = document.getElementById('ans3');
 
